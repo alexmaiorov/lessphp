@@ -230,9 +230,9 @@
 
 
 // №16
-function replace($a) {
-	echo str_replace(" ", "_", $a);
-};
+// function replace($a) {
+// 	echo str_replace(" ", "_", $a);
+// };
 
 function translit($str){
 	$aLetters = array(
@@ -271,10 +271,11 @@ function translit($str){
 		"я" => "ya"
     );
     $str = strtr($str, $aLetters);
+    $str = str_replace(" ", "_", $str);
     return $str;
 };
-$a = translit('Раз два три четыре');
-echo replace($a);
+// $a = translit('Раз два три четыре');
+echo translit('Раз два три четыре');
 
 
 ?>
