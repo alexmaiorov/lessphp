@@ -14,35 +14,35 @@
     // $a = 8;
 	// switch ($a) {
     // case 1:
-    //     echo "1";
+    //     echo "a++";
     // case 2:
-    //     echo "2";
+    //     echo "a++";
     // case 3:
-    //     echo "3";
+    //     echo "a++";
     // case 4:
-    //     echo "4";
+    //     echo "a++";
     // case 5:
-    //     echo "5";
+    //     echo "a++";
     // case 6:
-    //     echo "6";
+    //     echo "a++";
     // case 7:
-    //     echo "7";
+    //     echo "a++";
     // case 8:
-    //     echo "8";
+    //     echo "a++";
     // case 9:
-    //     echo "9";
+    //     echo "a++";
     // case 10:
-    //     echo "10";
+    //     echo "a++";
     // case 11:
-    //     echo "11";
+    //     echo "a++";
     // case 12:
-    //     echo "12";
+    //     echo "a++";
     // case 13:
-    //     echo "13";
+    //     echo "a++";
     // case 14:
-    //     echo "14";
+    //     echo "a++";
     // case 15:
-    //     echo "15";
+    //     echo "a++";
 	// 	break;
     // }
     
@@ -148,13 +148,92 @@
 
 // foreach ($regionArray as $key => $region_value) {
 //     echo "$key: <br/>";
-//   foreach ($region_value as $sity_value) {
-//      echo "$sity_value, ";
+//   foreach ($region_value as $city_value) {
+//      echo "$city_value, ";
 //   }
 //   echo '<br/>';
 // }
 
 // №11
+// function translit($str){
+// 	$aLetters = array(
+// 		"а" => "a", 
+// 		"б" => "b", 
+// 		"в" => "v", 
+// 		"г" => "g", 
+// 		"д" => "d", 
+// 		"е" => "e", 
+// 		"ё" => "yo",
+// 		"ж" => "zh", 
+// 		"з" => "z", 
+// 		"и" => "i", 
+// 		"й" => "y", 
+// 		"к" => "k", 
+// 		"л" => "l", 
+// 		"м" => "m",
+// 		"н" => "n", 
+// 		"о" => "o", 
+// 		"п" => "p", 
+// 		"р" => "r", 
+// 		"с" => "s", 
+// 		"т" => "t", 
+// 		"у" => "u",
+// 		"ф" => "f", 
+// 		"х" => "h", 
+// 		"ц" => "ts", 
+// 		"ч" => "ch", 
+// 		"ш" => "sh", 
+// 		"щ" => "s'h", 
+// 		"ъ" => "",
+// 		"ы" => "i", 
+// 		"ь" => "'", 
+// 		"э" => "e", 
+// 		"ю" => "yu", 
+// 		"я" => "ya"
+//     );
+//     $str = strtr($str, $aLetters);
+//     return $str;
+// };
+// echo translit('Раз два');
+
+// №12
+// function replace($str) {
+// 	echo str_replace(" ", "_", $str);
+// };
+// replace("Privet kak dela");
+
+// №13
+
+
+// №14
+// for ($n = 0; $n < 10; print $n++) {}
+
+
+// №15
+// $regionArray = [
+//     'moscowRegion' => ['Moscow ', 'Zelenograd ', 'Klin '],
+//     'leningradRegion' => ['SPb ', 'Vsevolozhsk ', 'Pavlovsk '],
+//     'smolenskRegion' => ['Smolensk ', 'Velizh ', 'Viyzma '],
+//     'pskovRegion' => ['Pskov ', 'Velikie Luki ', 'Nevel ']
+// ];
+
+// foreach ($regionArray as $key => $region_value) {
+//     echo "$key: <br/>";
+//   foreach ($region_value as $city_value) {
+//     if ($city_value[0] == "K")
+//     echo "$city_value, ";
+//     else
+//     echo "1<br/>";
+//   }
+//   echo '<br/>';
+// }
+
+
+// №16
+// function replace($a) {
+// 	echo str_replace(" ", "_", $a);
+// };
+
 function translit($str){
 	$aLetters = array(
 		"а" => "a", 
@@ -191,7 +270,12 @@ function translit($str){
 		"ю" => "yu", 
 		"я" => "ya"
     );
-    
-};    
+    $str = strtr($str, $aLetters);
+    $str = str_replace(" ", "_", $str);
+    return $str;
+};
+// $a = translit('Раз два три четыре');
+echo translit('Раз два три четыре');
+
 
 ?>
